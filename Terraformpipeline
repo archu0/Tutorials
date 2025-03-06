@@ -31,7 +31,7 @@ pipeline {
         }
         stage("Terraform apply") {
             steps {
-                sh "TF_VAR_aws_access_key=created_paste TF_VAR_aws_secret_key=created_paste  terraform apply --auto-approve"
+                sh "TF_VAR_aws_access_key=created_paste TF_VAR_aws_secret_key=created_paste terraform apply --auto-approve"
             }
         }
     }
