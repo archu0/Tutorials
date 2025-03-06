@@ -1,6 +1,9 @@
 #!/bin/bash
-
-yum update -y
-yum install httpd -y
-systemctl start httpd
-systemctl enable httpd
+sudo yum update -y
+sudo yum search docker
+sudo yum info docker
+sudo yum install -y docker
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+sudo systemctl status docker.service
+curl -sL https://raw.githubusercontent.com/sakit333/ansible_insta/refs/heads/main/worker_ansible_node.sh | bash
