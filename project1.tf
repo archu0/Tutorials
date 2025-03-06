@@ -36,7 +36,7 @@ resource "aws_instance" "server_one" {
   tags = {
     Name = "server_one"
   }
-  user_data = file("./startup.sh")
+  user_data = file("./sample1.sh")
 }
 
 
